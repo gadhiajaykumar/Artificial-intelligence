@@ -1,0 +1,25 @@
+Ex. No: 11(A)
+
+A)PRINTING ALL ELEMENTS OF A LIST
+
+ AIM :
+To write a prolog program to implement List and perform given operations to print list, append list and to check whether a member is present or not in the list.
+
+
+ALGORITHM:
+STEP 1: Start the program. Get inputs.
+STEP 2: Declare the facts and rules for List.
+
+STEP 3: Perform suitable operations.
+STEP 4: Post Queries related to the given problem in the Query box.
+
+STEP 5: Compile and execute the program.
+
+STEP 6: Get the answers for the queries asked and print the result.
+
+STEP 7: End
+
+PROGRAM:
+
+printlist([]).
+printlist([X|List]) :- write(X),nl, printlist(List).
