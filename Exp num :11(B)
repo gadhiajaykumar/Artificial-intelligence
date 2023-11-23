@@ -1,0 +1,9 @@
+Date:		          PROLOG PROGRAM-WORKING WITH LISTS
+Ex. No: 11(B)
+
+B)TO APPEND AN INTEGER INTO THE LIST
+
+PROGRAM:
+
+append([],L,L).
+append([X|L1],L2,[X|L3]) :- append(L1,L2,L3).
