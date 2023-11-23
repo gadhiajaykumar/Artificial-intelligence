@@ -1,0 +1,30 @@
+Ex. No: 10(A)
+
+A).PROCESSING NUMBERS: CALCULATING FACTORIAL
+AIM:
+To write a prolog program to implement Factorial.
+
+
+ALGORITHM:
+STEP 1: Start the program
+
+ STEP 2: Enter the integer as X.
+
+ STEP 3: Initialize A=1
+  
+STEP 4: If X=0, then print Factorial of A.
+
+STEP 5: If X! =0, (ie) =B, then perform Factorial of B and print the result.
+
+STEP 6: End.
+
+PROGRAM:
+
+fact(0,1).
+fact(N,F) :-
+(   % the below is for +ve factorial N > 0->
+(   N1 is N - 1,
+fact(N1,F1),
+F is N*F1);
+% The below is for -ve factorial
+N<0->  (   N1 is N+1,fact(N1,F1),F is N*F1)).
