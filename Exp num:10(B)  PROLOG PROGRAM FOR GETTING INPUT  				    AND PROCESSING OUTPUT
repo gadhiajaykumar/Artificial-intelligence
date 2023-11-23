@@ -1,0 +1,28 @@
+Ex. No: 10(B)
+
+B).GCD OF TWO NUMBERS 
+AIM:
+
+To write a prolog program to implement GCD of Two numbers.
+
+ALGORITHM:
+
+STEP 1: Start the program. Get input for the two numbers
+STEP 2: Declare the facts and rules for GCD of two numbers.
+
+STEP 3: Perform suitable operations.
+STEP 4: Post Queries related to the given problem in the Query box.
+
+STEP 5: Compile and execute the program.
+
+STEP 6: Get the answers for the queries asked and print the result.
+
+STEP 7: End
+
+PROGRAM:
+
+gcd(X,Y):-X=Y,write('GCD of two numbers is '),write(X);
+X=0,write('GCD of two numbers is '),write(Y);
+Y=0,write('GCD of two numbers is '),write(X);
+Y>X,Y1 is Y-X,gcd(X,Y1);
+X>Y,Y1 is X-Y,gcd(Y1,Y).
