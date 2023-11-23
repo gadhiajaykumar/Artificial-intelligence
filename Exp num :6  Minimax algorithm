@@ -1,0 +1,72 @@
+Date:			                   MINIMAX  ALGORITHM
+Ex. No: 6
+AIM:
+
+To write a python program to implement Min-Max Algorithm.
+
+
+
+ALGORITHM:
+
+STEP 1: Start the program
+
+STEP 2: Minimax is a kind of backtracking algorithm that is used in decision making and game theory to find the optimal move for a player, assuming that your opponent also plays optimally.
+
+STEP 3: It is widely used in two player turn-based games such as Tic-Tac-Toe, Backgammon, Mancala, Chess, etc.
+
+STEP 4: In Minimax the two players are called maximizer and minimizer.
+
+STEP 5: Maximizer goes LEFT: It is now the minimizers turn. The minimizer now has a choice between 3 and 5. Being the minimizer it will choose the least among both, that is 3
+
+STEP 6: Maximizer goes RIGHT: It is now the minimizers turn. The minimizer now has a choice between 2 and 9. He will choose 2 as it is the least among the two values.
+
+STEP 7: Being the maximizer, you would choose the larger value
+
+STEP 8: Compile and execute the program.
+
+STEP 9: Print the result.
+
+STEP 10: End.
+
+PROGRAM:
+# A simple Python3 program to find
+# maximum score that
+# maximizing player can get
+import math
+def minimax (curDepth, nodeIndex,
+             maxTurn, scores,
+             targetDepth):
+ 
+    # base case : targetDepth reached
+    if (curDepth == targetDepth):
+        return scores[nodeIndex]
+     
+    if (maxTurn):
+        return max(minimax(curDepth + 1, nodeIndex * 2,
+                    False, scores, targetDepth),
+                   minimax(curDepth + 1, nodeIndex * 2 + 1,
+                    False, scores, targetDepth))
+     
+    else:
+        return min(minimax(curDepth + 1, nodeIndex * 2,
+                     True, scores, targetDepth),
+                   minimax(curDepth + 1, nodeIndex * 2 + 1,
+                     True, scores, targetDepth))
+     
+# Driver code
+scores = [3, 5, 2, 9, 12, 5, 23, 23]
+ 
+treeDepth = math.log(len(scores), 2)
+ 
+print("The optimal value is : ", end = "")
+print(minimax(0, 0, True, scores, treeDepth))
+# This code is contributed
+# by rootshadow
+                           
+OUTPUT:
+
+
+
+
+
+RESULT: Therefore, the above program to implement Min-Max Algorithm is compiled and executed successfully.
